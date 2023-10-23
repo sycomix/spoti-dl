@@ -16,5 +16,4 @@ def get_spotify_client() -> spotipy.Spotify:
 
 def get_spotify_token(client: spotipy.Spotify) -> spotipy.SpotifyOAuth:
     auth_manager: SpotifyOAuth = client.auth_manager
-    token = auth_manager.get_access_token(None, as_dict=False, check_cache=True)
-    return token
+    return auth_manager.get_access_token(None, as_dict=False, check_cache=True)

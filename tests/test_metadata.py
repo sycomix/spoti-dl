@@ -28,11 +28,9 @@ def generate_album_art():
     album_art_url = "https://i.scdn.co/image/ab67616d0000b273c91030650cb3fdf8c\
 75394f0"
 
-    download_path = utils.download_album_art(
+    return utils.download_album_art(
         path=".", link=album_art_url, title="Mutatis mutandis"
     )
-
-    return download_path
 
 
 def test_add_metadata_mp3(

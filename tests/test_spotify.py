@@ -80,7 +80,7 @@ b1b87827cc604d0a"
 
 @pytest.fixture()
 def generate_new_song():
-    song = package.SpotifySong(
+    return package.SpotifySong(
         name="Le sort de Circé",
         artists=["Juliette"],
         album_name="Mutatis mutandis",
@@ -89,8 +89,6 @@ def generate_new_song():
         cover_url="https://i.scdn.co/image/ab67616d0000b273e5c8d59f7\
 f75f7d2e25022a6",
     )
-
-    return song
 
 
 def test_new_song(generate_new_song):

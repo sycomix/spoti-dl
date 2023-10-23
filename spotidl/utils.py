@@ -8,7 +8,7 @@ import logging
 from spotidl import exceptions
 
 
-default_save_dir = os.getcwd() + "/dl"
+default_save_dir = f"{os.getcwd()}/dl"
 
 
 def initialize_logger():
@@ -30,13 +30,11 @@ def load_env_vars() -> dict:
     client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
     redirect_uri = os.getenv("SPOTIPY_REDIRECT_URI")
 
-    env_vars = {
+    return {
         "id": client_id,
         "secret": client_secret,
         "redirect_uri": redirect_uri,
     }
-
-    return env_vars
 
 
 def check_env_vars(env_vars: dict):
